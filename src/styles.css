@@ -1,0 +1,170 @@
+/* Mengatur tampilan umum */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  
+  h1 {
+    color: #666;
+    margin-left: 20px;
+  }
+
+h1.title {
+    text-align: center;
+    color: #000
+  }
+  
+  h2 {
+    color: #666;
+  }
+  
+  p {
+    color: #666;
+    margin-left: 20px;
+  }
+  
+  div {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Mengatur tampilan container untuk activity */
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .activity-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 570px;
+    text-align: center;
+  }
+  
+  button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button.stop {
+    background-color: #ff4d4d;
+    color: white;
+  }
+
+  button.stop:hover {
+    background-color: #F8EDE3;
+    color: black;
+    transform: scale(110%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+  }
+  
+  button.start:hover {
+    background-color: #F8EDE3;
+    color: black;
+    transform: scale(110%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+  }
+
+  button.start {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  /* Mengatur tabel di bagian 'Past Activity' */
+  table {
+    width: 95%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #4caf50;
+    color: white;
+    margin-top: 20px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  td {
+    font-size: 16px;
+  }
+  
+  .font-size-18 {
+    font-size: 18px;
+  }
+  .text-bold {
+    font-weight: bold;
+  }
+
+/* Responsivitas untuk tablet dengan lebar minimum 768px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .activity-card {
+        margin: 0 auto;
+        width: 90%; /* agar kartu menyesuaikan */
+    }
+}
+
+/* Responsivitas untuk desktop dengan lebar minimum 1024px */
+@media screen and (min-width: 1024px) {
+    .container {
+        display: flex;
+    }
+
+    .activity-card {
+        width: 570px; /* ukuran tetap untuk desktop */
+    }
+}
+
+/* Responsivitas untuk mobile dengan lebar maksimum 767px */
+@media screen and (max-width: 767px) {
+    .container {
+        display: block;
+    }
+
+    .activity-card {
+        width: 90%; /* Lebar penuh hampir seluruh layar */
+        margin: 20px auto; /* Untuk sentralisasi kartu */
+    }
+
+    h1.title, h2, p {
+        
+        margin-left: 10px; /* Hilangkan margin pada mobile */
+    }
+
+    table {
+        width: 100%; /* Sesuaikan tabel agar lebar penuh di mobile */
+    }
+
+    th, td {
+        font-size: 14px; /* Perkecil font pada tabel untuk mobile */
+        padding: 10px; /* Sesuaikan padding */
+    }
+}
